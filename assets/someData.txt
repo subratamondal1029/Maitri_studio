@@ -1,0 +1,4 @@
+mailId = maitristudio1@gmail.com
+number = 98923 09330
+slogan = মৈত্রী স্টুডিও &  অনলাইন সেবা কেন্দ্র
+

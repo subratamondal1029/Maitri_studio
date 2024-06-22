@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bgcolor: #5e0035;
+  --color: #005c69;
+}
+
+::selection {
+  background-color: var(--bgcolor);
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: aliceblue;
+  font-family: "Roboto", sans-serif;
+}
+
+.defaultColor{
+    color: var(--bgcolor);
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: var(--bgcolor);
+}
+
+.logo {
+  background-color: var(--bgcolor);
+  width: 100px;
+  position: fixed;
+  top: 3px;
+  left: 3px;
+  padding-left: 10px;
+  transform: translateY(-10%);
+  cursor: pointer;
+  border-radius: 10pc;
+}
+
+.logo img {
+  width: 100%;
+}
+
+nav {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 35px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  transition: color 0.3s linear;
+}
+
+nav ul#hotLinks li a:hover {
+  color: var(--color);
+}
+
+nav ul li a.activeLink {
+  color: var(--color);
+}
+
+nav ul.socialLinks {
+  width: auto;
+  align-items: center;
+}
+
+.socialLinks img {
+  width: 20px;
+  fill: white;
+  cursor: pointer;
+}
+
+main {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+#coverImage img {
+  width: 100%;
+  height: 60vh;
+}
+
+#headingName {
+  width: 80%;
+  margin-inline: auto;
+  margin-top: -19px;
+  position: relative;
+  text-align: center;
+  background: rgb(0, 92, 105);
+  background: linear-gradient(
+    360deg,
+    rgb(39, 5, 2) 0%,
+    rgba(94, 0, 53, 1) 100%
+  );
+  color: white;
+}
+
+#headingName h1 {
+  font-size: 30px;
+}
+
+#aboutUs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 20px;
+  padding-inline: 30px;
+}
+
+#aboutUs img{
+  max-width: 435px;
+  width: 100%;
+}
+
+#aboutText {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+  max-width: 400px;
+  max-height: 280px;
+}
+
+#aboutText h2 {
+  font-weight: bolder;
+}
+
+#aboutText p {
+  line-height: 40px;
+}
+
+#services {
+  width: 100%;
+  margin-top: 60px;
+  padding-bottom: 20px;
+}
+
+#services h2 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+#serviceCards {
+  width: 100%;
+  padding-inline: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 70px;
+}
+
+.serviceCard {
+  width: 97%;
+  max-width: 400px;
+  padding: 10px;
+  box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  transition: all 0.3s linear;
+}
+
+.serviceCard h1 {
+  margin-top: 20px;
+}
+
+.serviceCard img {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#serviceLogo {
+  width: 50px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#serviceLogo img {
+  object-fit: fill;
+  border-radius: 10pc;
+}
+
+.serviceCard:hover {
+  box-shadow: 1px 2px 9px 1px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff78;
+}
+
+.serviceCard:hover #serviceLogo img {
+  box-shadow: 0 -3px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+#contact {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding-inline: 20px;
+}
+
+#contact h3 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#contact #map iframe {
+  width: 99%;
+}
+
+#contact #contactInfo {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+#address h4 {
+  font-size: 20px;
+  line-height: 50px;
+}
+
+
+
+
+footer{
+  margin-top: 50px;
+  width: 99%;
+  padding: 20px;
+  background-color: var(--bgcolor);
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#gotoTop{
+  position: absolute;
+  bottom: 70px;
+  right: 10px;
+  color: var(--bgcolor);
+  text-decoration: none;
+  transform: rotate(270deg);
+  font-size: 40px;
+  padding: 0px 10px;
+  background-color: var(--color);
+} 
+
+
+#anousments h1{
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+#anousments img{
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#footerRight{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 250px;
+}
+
+#footerRight .socialLinks{
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  padding-top: 40px;
+}
+
+#copyright a{
+  color: white;
+}
+
+
+
+#popUpLayer{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: all .3s ease-in;
+}
+
+#popUpLayer img{
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+}
+
+
+
+@media screen and (max-width:850px) {
+ #hotLinks{
+  display: none;
+ } 
+
+ #aboutText{
+  width: 100%;
+ }
+
+}
+
+@media screen and (max-width:500px) {
+  
+  #aboutText p {
+   line-height: 30px;
+  }
+
+  nav{
+    justify-content: flex-end;
+  }
+}
