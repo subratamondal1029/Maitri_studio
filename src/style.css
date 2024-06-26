@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img::selection{display: none;}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+}
+header > div{
+    width: 50%;
+    padding-inline: 40px;
+}
+
+.logo{
+    width: 100%;
+    position: relative;
+}
+.logo img{width: 100px;}
+
+.logo p{
+    position: absolute;
+    bottom: 20px;
+    left: 32px;
+    color: rgb(255 155 0);
+}
+
+#headerright{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contacts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#contacts a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-decoration: none;
+    color: rgb(0, 81, 255);
+}
+
+#contacts a:hover{
+    text-decoration: underline;
+}
+
+#contacts img{
+    width: 20px;
+    display: inline-block;
+}
+
+.swiper{
+    width: 100%;
+    height: 50vh;
+    margin-top: 100px;
+    box-shadow: 0px 9px 20px 2px rgba(0, 0, 0, 0.3);
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    cursor: grab;
+  }
+
+  .swiper-slide img:active{cursor: grabbing;}
+
+  #recentAnounsment{
+    margin-top: 60px;
+  }
+
+  #anousmentHeading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  #anousmentHeading img{
+    width: 60px;
+    transform: rotateZ(30deg);
+  }
+
+  .line{
+    background-color: #0d6efd;
+    width: 200px;
+    height: 3px;
+    margin-inline: auto;
+  }
+
+  #cards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-inline: 25px;
+    margin-top: 25px;
+  }
+
+  .card{
+    width: 100%;
+    box-shadow: 0px 9px 20px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    transition: all .6s ease;
+  }
+
+  .card img{
+      width: 100%;
+      border-radius: 20px;
+    object-fit: cover;
+  }
+
+  .card:hover{
+    box-shadow: 0px 9px 20px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  #aboutUsSection{
+    background-color: #0d6efd;
+    margin-top: 50px;
+    width: 100%;
+    height: 40px;
+  }
