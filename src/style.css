@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html::-webkit-scrollbar{
+  display: none;
+}
+
+html{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  font-family: "Roboto", sans-serif;
 }
 
 img::selection{display: none;}
@@ -118,11 +129,12 @@ header > div{
     margin-inline: auto;
   }
 
-  #cards{
+  .cards{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
     padding-inline: 25px;
     margin-top: 25px;
@@ -130,6 +142,7 @@ header > div{
 
   .card{
     width: 100%;
+    max-width: 600px;
     box-shadow: 0px 9px 20px 2px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     transition: all .6s ease;
@@ -146,8 +159,46 @@ header > div{
   }
 
   #aboutUsSection{
-    background-color: #0d6efd;
-    margin-top: 50px;
+    background-color: #003f9e;
+    color: white;
     width: 100%;
-    height: 40px;
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px 10px;
   }
+
+#aboutUs, #whyUs{
+  padding: 10px 20px;
+}
+
+#aboutUs h1{
+  margin-block: 10px 24px;
+}
+
+#aboutUs p{
+  margin-block: 10px;
+  padding-inline: 25px;
+  color: #e7e7e7;
+  line-height: 21px;
+}
+
+
+#whyUs h1{
+  margin-block: 30px 8px;
+}
+
+#whyUs .card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  background-color: white;
+  color: black;
+  max-width: 300px;
+  padding: 30px 10px;
+}
+
+#whyUs .card img{
+  width: 100px;
+}
