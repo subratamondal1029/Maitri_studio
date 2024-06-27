@@ -4,7 +4,7 @@ document.getElementById('goTop').addEventListener('click', () =>{
  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 })
 
-const DriveUrl = "https://script.google.com/macros/s/AKfycbzsuTiRgbjI2gKgf9PlxV19ePR29pBZzSwdPchlFMk0MCRWJa2tG-WdDAer5JPvjSrq/exec"
+const DriveUrl = "https://script.google.com/macros/s/AKfycbw0FSk9YJ61C1tOm094fmYL9F5QxYEhlHiHtDPHkS7t86oJB0K-8Zl352C9jSGtE9w8/exec"
 fetch(DriveUrl)
 .then((res) => res.json())
 .then((data) =>{
