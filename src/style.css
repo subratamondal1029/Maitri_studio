@@ -360,6 +360,21 @@ footer hr{
   cursor: pointer;
 }
 
+#loader{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loader img{
+  width: 100%;
+}
 
 
 @media screen and (max-width:940px) {#contactInfo{grid-template-columns: 1fr;}}
