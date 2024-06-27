@@ -364,6 +364,7 @@ footer hr{
   position: fixed;
   width: 100vw;
   height: 100vh;
+  background: #ffff;
   top: 0;
   left: 0;
   z-index: 20;
@@ -373,7 +374,7 @@ footer hr{
 }
 
 #loader img{
-  width: 100%;
+  width: 30%;
 }
 
 
