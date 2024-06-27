@@ -27,8 +27,14 @@ header {
   position: fixed;
   top: 0;
   z-index: 10;
-  background-color: white;
+  background-color: #f3f8ff;
 }
+#menuBtn{display: none;}
+
+#menuBtn img{
+  width: 30px;
+}
+
 header > div {
   width: 50%;
   padding-inline: 40px;
@@ -40,6 +46,7 @@ header > div {
 }
 .logo img {
   width: 100px;
+  filter: contrast(200%);
 }
 
 .logo p {
@@ -61,7 +68,7 @@ header > div {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
 }
 
 #contacts a {
@@ -105,11 +112,6 @@ header > div {
   width: 100%;
   height: 100%;
   object-fit: fill;
-  cursor: grab;
-}
-
-.swiper-slide img:active {
-  cursor: grabbing;
 }
 
 #recentAnounsment {
@@ -162,7 +164,7 @@ header > div {
 
 .card {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   box-shadow: 0px 9px 20px 2px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   transition: all 0.6s ease;
@@ -238,6 +240,8 @@ header > div {
   position: absolute;
   top: -45px;
   letter-spacing: 1px;
+  width: 100%;
+  text-align: center;
 }
 #contactUs > h1::after,
 #addressInfo h2::after {
@@ -250,11 +254,17 @@ header > div {
   height: 3px;
   background-color: #0d6efd;
 }
+#contactUs > h1::after{
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 #contactMap {
   width: 100%;
+  height: 50vh;
 }
 #contactMap iframe {
+  height: 100%;
   width: 100%;
 }
 
@@ -263,23 +273,27 @@ header > div {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-direction: column;
   gap: 20px;
-  padding-top: 60px;
+  padding-top: 20px;
 }
 
 #contactAddress > div {
   width: 100%;
   padding-left: 40px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 30px;
+}
+
+#contactInfo{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-content: start;
+  align-items: center;
 }
 
 #contactInfo a {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
   text-decoration: none;
@@ -294,9 +308,19 @@ header > div {
   width: 25px;
 }
 
+
+ #addressInfo{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+ }
+
 #addressInfo h2 {
   position: relative;
   letter-spacing: .7px;
+  margin-top: 20px;
 }
 
 #addressInfo p {
@@ -313,11 +337,45 @@ footer {
   margin-top: 30px;
 }
 
-footer img{
-  filter: contrast(300%);
-}
 
 footer hr{
   border-color: rgb(158, 158, 158);
   margin-block: 13px;
+}
+
+#goTop{
+  background: transparent;
+  border: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/up-arrow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+
+
+@media screen and (max-width:940px) {#contactInfo{grid-template-columns: 1fr;}}
+@media screen and (max-width:600px) {
+  #contactMap{height: 40vh;}
+  #contactUs{flex-direction: column;}
+  .logo p{font-size: 10px; bottom: 25px;}
+  #contacts a{display: none;}
+  #menuBtn{display: block;}
+}
+@media screen and (max-width:450px) {
+
+  .swiper{
+    height: 30vh;
+    margin-top: 80px;
+  }
+  #aboutUs{padding-inline: 0;}
+  .logo img{width: 70px;}
+  .logo p{display: none;}
+  #whyUs .cards{padding-inline: 10px;}
+  #aboutUs p{font-size: 13px;}
 }
